@@ -13,6 +13,8 @@ type DataContextProps = {
     news : HNewsModel[],
     loading : boolean,
     error : boolean,
+    setPageNum : Dispatch<SetStateAction<number>>,
+    pageNum : number
 }
 
 
@@ -29,13 +31,14 @@ export function DataProvider({children} : DataProviderProps){
     const [news , setNews] = useState<HNewsModel[]>([])
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(false)
+    const [pageNum, setPageNum] = useState(0)
 
 
 
     function GetData(input : string) {
 
         return(
-            FetchDataFromApi(input)
+            FetchDataFromApi(input,pageNum)
         )
     }
 
@@ -56,10 +59,10 @@ export function DataProvider({children} : DataProviderProps){
             }
         }, 500)
         return () => clearTimeout(fetchNews)
-    },[searchQuery])
+    },[searchQuery, pageNum])
 
     return(
-        <DataProviderContext.Provider value={{setSearchQuery,searchQuery, news, loading, error }}>
+        <DataProviderContext.Provider value={{setSearchQuery,searchQuery, news, loading, error, setPageNum, pageNum }}>
             {children}
         </DataProviderContext.Provider>
     )
