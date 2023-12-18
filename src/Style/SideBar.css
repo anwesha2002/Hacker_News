@@ -1,0 +1,4 @@
+.items:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
