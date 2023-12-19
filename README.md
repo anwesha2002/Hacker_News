@@ -20,11 +20,17 @@ This repository contains a web application that utilizes the Hacker News API to 
    ```bash
    git clone https://github.com/your-username/hacker-news-viewer.git
 
-   cd hacker-news-viewer
+2.Navigate to the project directory:
+ 
+    cd hacker-news-viewer
 
-   npm install
+3.Install dependencies:
 
-   npm start
+    npm install
+
+4.Run the application:
+
+    npm start
    
 ## Usage
 
