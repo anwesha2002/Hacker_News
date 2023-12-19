@@ -18,19 +18,19 @@ This repository contains a web application that utilizes the Hacker News API to 
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/hacker-news-viewer.git
+   git clone https://github.com/anwesha2002/Hacker_News_Unitylabs.git
 
 2.Navigate to the project directory:
- 
-    cd hacker-news-viewer
+   
+     cd hacker-news-viewer
 
 3.Install dependencies:
 
-    npm install
+     npm install
 
 4.Run the application:
 
-    npm start
+     npm start
    
 ## Usage
 
