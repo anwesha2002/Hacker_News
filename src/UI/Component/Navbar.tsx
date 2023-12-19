@@ -12,7 +12,7 @@ export function Navbar(){
             <Container fluid="sm" className="border-bottom">
                 <NavbarBs.Brand className="d-flex flex-row align-items-center justify-content-center">
                     <img className="Logo" src={Logo}/>
-                    <div className="ms-3 text-secondary">
+                    <div className="ms-3 ">
                         <h4 className="d-flex flex-column">
                             Search
                             <span>Hacker News</span>
@@ -23,18 +23,18 @@ export function Navbar(){
                     <Nav.Item  className=" w-100">
                             <InputGroup >
                                 <InputGroup.Text className="rounded-start-pill w-25"><FaSearch style={{color : "orange"}}/></InputGroup.Text>
-                                <FormControl type="text" value={searchQuery} onChange={(e)=>setSearchQuery(e.target.value)} className="rounded-end-pill" aria-label="default"/>
+                                <FormControl placeholder="Search news..." type="text" value={searchQuery} onChange={(e)=>setSearchQuery(e.target.value)} className="rounded-end-pill" aria-label="default"/>
                             </InputGroup>
                     </Nav.Item>
                 </Nav>
-                <NavbarBs.Toggle aria-controls="basic-navbar-nav"/>
-                <NavbarBs.Collapse id="basic-navbar-nav">
-                    <Nav className="text-muted" >
+                <Nav className="text-muted" >
+                    <NavbarBs.Toggle aria-controls="basic-navbar-nav"/>
+                    <NavbarBs.Collapse id="basic-navbar-nav">
                         <Nav.Link>Sort by : </Nav.Link>
                         <Nav.Link>Popularity</Nav.Link>
                         <Nav.Link className="border-bottom border-warning">Date</Nav.Link>
-                    </Nav>
-                </NavbarBs.Collapse>
+                    </NavbarBs.Collapse>
+                </Nav>
             </Container>
         </NavbarBs>
     )

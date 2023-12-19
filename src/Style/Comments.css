@@ -1,0 +1,8 @@
+.comments:hover{
+    transform: scale(1.03);
+}
+
+.comments{
+    transition: transform 1s;
+    cursor: pointer;
+}

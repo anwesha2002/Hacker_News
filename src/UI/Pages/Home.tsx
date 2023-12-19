@@ -2,6 +2,7 @@ import {Navbar} from "../Component/Navbar.tsx";
 import {Container} from "react-bootstrap";
 import {SideBar} from "../Component/SideBar.tsx";
 import {Body} from "../Component/Body.tsx";
+import '../../Style/Body.css'
 
 export function Home(){
     return(
