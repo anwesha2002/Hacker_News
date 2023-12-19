@@ -19,3 +19,22 @@ This repository contains a web application that utilizes the Hacker News API to 
 
    ```bash
    git clone https://github.com/your-username/hacker-news-viewer.git
+
+   cd hacker-news-viewer
+
+   npm install
+
+   npm start
+   
+## Usage
+
+- The home page displays the top stories from Hacker News.
+- Use the search bar to search for news based on keywords.
+- Click on a news item to view its details and fetch comments.
+
+## Files
+
+- src/Pages/Home.tsx : Page to display top stories.
+- src/Pages/postDetail.tsx: Page to display news details and comments.
+- src/App.tsx: Main application component.
+
