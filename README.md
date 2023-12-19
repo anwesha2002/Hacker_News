@@ -12,6 +12,7 @@ This repository contains a web application that utilizes the Hacker News API to 
 
 - React for building the user interface.
 - Hacker News API for fetching news and comments.
+- React-bootstrap from responsive design
 
 ## Installation and Setup
 
