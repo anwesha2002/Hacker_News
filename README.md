@@ -23,7 +23,7 @@ This repository contains a web application that utilizes the Hacker News API to 
 
 2.Navigate to the project directory:
    
-     cd hacker-news-viewer
+     cd Hacker_News_Unitylabs
 
 3.Install dependencies:
 
