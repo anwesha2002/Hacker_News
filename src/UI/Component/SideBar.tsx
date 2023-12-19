@@ -8,7 +8,7 @@ import {
 import '../../Style/SideBar.css'
 export function SideBar(){
     return(
-        <div className="w-25 text-muted border-end vh-full bg-body-tertiary">
+        <div className="w-25 text-muted border-end bg-body-tertiary sidebar">
             <div className="mt-3 d-flex items align-items-center p-2 bg-body-secondary">
                 <p className="ms-4 "><FaNewspaper className="me-4"/>All</p>
             </div>
@@ -28,5 +28,6 @@ export function SideBar(){
                 <p className="ms-4"><FaStar className="me-4"/>Starred</p>
             </div>
         </div>
+
     )
 }

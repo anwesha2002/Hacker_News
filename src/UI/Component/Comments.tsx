@@ -2,9 +2,9 @@ import {CommentModel} from "../../Model/CommentModel.ts";
 import {Card} from "react-bootstrap";
 import {DateFormat} from "../../Util/TimeFormat.ts";
 
+
+
 export function Comments({author, created_at,text, children} : CommentModel){
-
-
 
     return(
         <>
@@ -23,7 +23,6 @@ export function Comments({author, created_at,text, children} : CommentModel){
                     }
                 </div>
             ))}
-
         </>
     )
 }

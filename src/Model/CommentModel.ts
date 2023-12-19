@@ -3,5 +3,6 @@ export interface CommentModel{
     created_at? : string,
     children? : CommentModel[],
     text : string,
-    id? : string
+    id? : string,
+
 }

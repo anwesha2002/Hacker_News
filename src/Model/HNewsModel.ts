@@ -4,5 +4,6 @@ export interface HNewsModel{
     points : number,
     author : string,
     url : string,
-    created_at : string
+    created_at : string,
+    story_text? : string
 }

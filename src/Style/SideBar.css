@@ -2,3 +2,9 @@
     background-color: lightgray;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 576px) {
+    .sidebar {
+        display: none;
+    }
+}

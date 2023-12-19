@@ -14,7 +14,7 @@ type DataContextProps = {
     loading : boolean,
     error : boolean,
     setPageNum : Dispatch<SetStateAction<number>>,
-    pageNum : number
+    pageNum : number,
 }
 
 
@@ -41,8 +41,6 @@ export function DataProvider({children} : DataProviderProps){
             FetchDataFromApi(input,pageNum)
         )
     }
-
-
 
     useEffect(()=>{
         const fetchNews = setTimeout(async()=>{

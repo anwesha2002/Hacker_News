@@ -1,5 +1,5 @@
 import {UseData} from "../Context/DataProvider.tsx";
-import {Row} from "react-bootstrap";
+import {Pagination, Row} from "react-bootstrap";
 import {News} from "./News.tsx";
 import {HiOutlineShare} from "react-icons/hi2";
 
@@ -12,7 +12,7 @@ export function Body(){
     return(
         <>
             <div className="w-75 my-3 ms-4 ">
-                <div className="d-flex flex-row align-items-baseline text-secondary">
+                <div className="d-flex flex-row align-items-baseline text-secondary ">
                     <h5 >All</h5>
                     <p className="mx-4">{news.length} results</p>
                     <HiOutlineShare/>
@@ -20,7 +20,13 @@ export function Body(){
                 {news.map(data=>(
                     <Row key={data.story_id}><News {...data}/></Row>
                 ))}
-                <div onClick={()=> {setPageNum(pageNum + 1)}} className="btn btn-warning">More</div>
+                <Pagination size="lg">
+                    {pageNum===0?null:<Pagination.Prev onClick={() => {
+                        setPageNum(pageNum - 1)
+                    }}/>}
+                    <Pagination.Item>{pageNum+1}</Pagination.Item>
+                    <Pagination.Next onClick={()=> {setPageNum(pageNum + 1)}}/>
+                </Pagination>
             </div>
         </>
     )

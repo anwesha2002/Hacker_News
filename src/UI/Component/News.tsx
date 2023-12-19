@@ -4,8 +4,9 @@ import {HiOutlineClock, HiOutlineShare} from "react-icons/hi2";
 import {HiOutlineHeart, HiOutlineStar, HiOutlineUser} from "react-icons/hi";
 import {DateFormat} from "../../Util/TimeFormat.ts";
 import {Link} from "react-router-dom";
+import {Truncate} from "../../Util/Truncate.tsx";
 
-export function News({story_id, title, author, created_at, points } :  HNewsModel){
+export function News({story_id, title, author, created_at, points, story_text } :  HNewsModel){
     //const story_id = useParams()
     //console.log(story_id)
 
@@ -17,6 +18,11 @@ export function News({story_id, title, author, created_at, points } :  HNewsMode
                         <Card.Title className="text-secondary">
                             {title}
                         </Card.Title>
+                        {story_text &&
+                            <Card.Body className="text-muted">
+                                <p dangerouslySetInnerHTML={{__html: Truncate(story_text)}}/>
+                            </Card.Body>
+                        }
                         <Card.Body className="d-flex flex-row justify-content-between align-items-center text-muted">
                             <div className="d-flex flex-row">
                                 <p className="me-5 d-flex align-items-center flex-row"><HiOutlineHeart className="me-2"/>{points} points</p>

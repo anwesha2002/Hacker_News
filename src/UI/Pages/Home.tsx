@@ -7,7 +7,7 @@ export function Home(){
     return(
         <>
             <Navbar/>
-            <Container className="d-flex flex-row">
+            <Container className="d-flex flex-row ">
                 <SideBar/>
                 <Body/>
             </Container>

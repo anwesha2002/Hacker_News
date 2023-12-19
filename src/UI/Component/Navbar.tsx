@@ -8,7 +8,7 @@ export function Navbar(){
     const {searchQuery , setSearchQuery} = UseData()
 
     return(
-        <NavbarBs >
+        <NavbarBs expand="lg">
             <Container fluid="sm" className="border-bottom">
                 <NavbarBs.Brand className="d-flex flex-row align-items-center justify-content-center">
                     <img className="Logo" src={Logo}/>
@@ -27,11 +27,14 @@ export function Navbar(){
                             </InputGroup>
                     </Nav.Item>
                 </Nav>
-                <Nav className="text-muted">
-                    <Nav.Link>Sort by : </Nav.Link>
-                    <Nav.Link>Popularity</Nav.Link>
-                    <Nav.Link className="border-bottom border-warning">Date</Nav.Link>
-                </Nav>
+                <NavbarBs.Toggle aria-controls="basic-navbar-nav"/>
+                <NavbarBs.Collapse id="basic-navbar-nav">
+                    <Nav className="text-muted" >
+                        <Nav.Link>Sort by : </Nav.Link>
+                        <Nav.Link>Popularity</Nav.Link>
+                        <Nav.Link className="border-bottom border-warning">Date</Nav.Link>
+                    </Nav>
+                </NavbarBs.Collapse>
             </Container>
         </NavbarBs>
     )
